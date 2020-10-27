@@ -113,7 +113,7 @@ app.use(async (ctx, next) => {
         return null;
       }
 
-      fs.unlinkSync(`${fileDir}\\${images[index].name}`);
+      fs.unlinkSync(`${fileDir}/${images[index].name}`);
       images.splice(index, 1);
 
       ctx.response.body = JSON.stringify(images);
